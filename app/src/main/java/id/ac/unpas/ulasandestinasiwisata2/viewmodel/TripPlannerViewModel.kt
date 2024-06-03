@@ -1,5 +1,6 @@
 package id.ac.unpas.ulasandestinasiwisata2.viewmodel
 
+// TripPlansScreen.kt
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,9 +8,11 @@ import id.ac.unpas.ulasandestinasiwisata2.data.Destination
 import id.ac.unpas.ulasandestinasiwisata2.data.Review
 import id.ac.unpas.ulasandestinasiwisata2.data.TripPlan
 import id.ac.unpas.ulasandestinasiwisata2.repository.TripPlannerRepository
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import java.util.*
+import java.util.UUID
 
 class TripPlannerViewModel(private val repository: TripPlannerRepository) : ViewModel() {
 
